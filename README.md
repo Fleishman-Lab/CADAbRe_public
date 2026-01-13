@@ -15,7 +15,8 @@ You will need to either have Rosetta installed or install it from http://www.ros
 ## Running CADAbRe
 
 ### Step 1: Relax the structures of the parental antibodies
-We recommend relaxing the parental structures before design. A RosettaScripts xml for running the relax can be found at xmls/Relax.xml and example pdbs can be found in example_pdbs. Please note that in our protocol for CADAbRe, we run the initial relax 15 times and take the lowest-scoring one. The output for the example pdbs can be found in example_pdbs_relaxed. 
+We recommend relaxing the parental structures before design. A RosettaScripts xml for running the relax can be found at xmls/Relax.xml and example pdbs can be found in example_pdbs. Please note that in our protocol for CADAbRe, we run the initial relax 15 times and take the lowest-scoring one. The output for the example pdbs can be found in example_pdbs_relaxed. Each relax job should take about 15 minutes to run on one CPU. 
 
 ### Step 2: Threading combinations of human germlines on each parental structure
-An example xml for running the threading can be found at xmls/CADAbRe.xml. Examples of several germline combinations threaded on the relaxed structure of PDB ID 3NAA can be found in example_pdbs_threaded.
+An example xml for running the threading can be found at xmls/CADAbRe.xml. Examples of several germline combinations threaded on the relaxed structure of PDB ID 3NAA can be found in example_pdbs_threaded. Each threading job should take about 5 minutes to run on one CPU. 
+
