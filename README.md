@@ -18,4 +18,4 @@ You will need to either have Rosetta installed or install it from http://www.ros
 We recommend relaxing the parental structures before design. A RosettaScripts xml for running the relax can be found at xmls/Relax.xml and example pdbs can be found in example_pdbs. Please note that in our protocol for CADAbRe, we run the initial relax 15 times and take the lowest-scoring one. The output for the example pdbs can be found in example_pdbs_relaxed. 
 
 ### Step 2: Threading combinations of human germlines on each parental structure
-An example xml for running the threading can be found at xmls/CADAbRe.xml. Examples of several germline combinations threaded on the relaxed structure of PDB ID 3NAA can be found in example_pdbs_threaded
+An example xml for running the threading can be found at xmls/CADAbRe.xml. Examples of several germline combinations threaded on the relaxed structure of PDB ID 3NAA can be found in example_pdbs_threaded.
