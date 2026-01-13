@@ -1,12 +1,13 @@
-# CUMAb
+# CADAbRe
 Licensed under the Non-Profit Open Software License version 3.0.
 
 This repository contains the RosettaScripts xmls needed to run CADAbRe. The method is described in our preprint ([Link to paper](https://www.biorxiv.org/content/10.64898/2025.12.10.693474v1)). Questions, comments, and suggestions can be sent to ariel.tennenhouse@weizmann.ac.il.
 
 ## Citations
-Please cite our preprint as well as IMGT 
+Please cite our preprint as well as IMGT and RosettaScripts 
 - Giudicelli, V., Chaume, D. & Lefranc, M.-P. IMGT/GENE-DB: a comprehensive database for human and mouse immunoglobulin and T cell receptor genes. Nucleic Acids Res. 33, D256–61 (2005).
 - Tennenhouse, A. et al. Structure-based design of antibody repertoires with drug-like properties. bioRxiv https://doi.org/10.64898/2025.12.10.693474 (2025).
+- Fleishman SJ, Leaver-Fay A, Corn JE, Strauch EM, Khare SD, Koga N, Ashworth J, Murphy P, Richter F, Lemmon G, Meiler J, Baker D. RosettaScripts: a scripting language interface to the Rosetta macromolecular modeling suite. PLoS One. 2011;6(6):e20161. doi: 10.1371/journal.pone.0020161. Epub 2011 Jun 24. PMID: 21731610; PMCID: PMC3123292.
 
 ## Installation
 You will need to either have Rosetta installed or install it from http://www.rosettacommons.org. CADAbRe uses git version d9d4d5dd3fd516db1ad41b302d147ca0ccd78abd
