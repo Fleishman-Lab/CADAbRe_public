@@ -4,17 +4,18 @@ Licensed under the Non-Profit Open Software License version 3.0.
 This repository contains the RosettaScripts xmls needed to run the CADAbRe design steps and some examples. The method is described in our preprint ([Link to paper](https://www.biorxiv.org/content/10.64898/2025.12.10.693474v1)). Questions, comments, and suggestions can be sent to ariel.tennenhouse@weizmann.ac.il.
 
 ## Citations
-Please cite our preprint as well as RosettaScripts 
-- Tennenhouse, A. et al. Energy-guided combinatorial co-optimization of antibody affinity and stability. bioRxiv https://doi.org/10.64898/2025.12.10.693474.
+Please cite our preprint as well as IMGT and RosettaScripts 
+- Giudicelli, V., Chaume, D. & Lefranc, M.-P. IMGT/GENE-DB: a comprehensive database for human and mouse immunoglobulin and T cell receptor genes. Nucleic Acids Res. 33, D256–61 (2005).
+- Tennenhouse, A. et al. Structure-based design of antibody repertoires with drug-like properties. bioRxiv https://doi.org/10.64898/2025.12.10.693474 (2025).
 - Fleishman SJ, Leaver-Fay A, Corn JE, Strauch EM, Khare SD, Koga N, Ashworth J, Murphy P, Richter F, Lemmon G, Meiler J, Baker D. RosettaScripts: a scripting language interface to the Rosetta macromolecular modeling suite. PLoS One. 2011;6(6):e20161. doi: 10.1371/journal.pone.0020161. Epub 2011 Jun 24. PMID: 21731610; PMCID: PMC3123292.
 
 ## Installation
-You will need to either have Rosetta installed or install it from http://www.rosettacommons.org. LAffAb uses git version d9d4d5dd3fd516db1ad41b302d147ca0ccd78abd
+You will need to either have Rosetta installed or install it from http://www.rosettacommons.org. CADAbRe uses git version d9d4d5dd3fd516db1ad41b302d147ca0ccd78abd
 
-## Running LAffAb
+## Running CADAbRe
 
 ### Step 1: Relax the structure of the parental antibody
-We recommend relaxing the parental structures before design. A RosettaScripts xml for running the relax can be found at xmls/Relax.xml, and an example pdb can be found in example_pdb. Please note that in our LAffAb protocol, we run the initial relax 15 times and take the lowest-scoring one. The output for the example pdb can be found in example_pdb_relaxed. Each relax job should take about 15 minutes to run on one CPU. 
+We recommend relaxing the parental structures before design. A RosettaScripts xml for running the relax can be found at xmls/Relax.xml, and example pdbs can be found in example_pdbs. Please note that in our CADAbRe protocol, we run the initial relax 15 times and take the lowest-scoring one. The output for the example pdbs can be found in example_pdbs_relaxed. Each relax job should take about 15 minutes to run on one CPU. 
 
 ### Step 2: Threading combinations of human germlines on each parental structure
 An example xml for running the threading can be found at xmls/CADAbRe.xml. Examples of several germline combinations threaded on the relaxed structure of PDB ID 3NAA can be found in example_pdbs_threaded. Each threading job should take about 5 minutes to run on one CPU. 
