@@ -14,17 +14,21 @@ Please cite our preprint, the paper defining the CDR H3 residue frequencies, HuC
 You will need to either have Rosetta installed or install it from http://www.rosettacommons.org. CADAbRe uses git version d9d4d5dd3fd516db1ad41b302d147ca0ccd78abd
 
 ## Running CADAbRe
+A flags file called "flags" is provided. The Rosetta database needs to be updated to the location of the Rosetta database corresponding to the Rosetta executable used. 
 
 ### Step 1: Relax the structure of the parental antibody
-We recommend relaxing the parental structures before design. A RosettaScripts xml for running the relax can be found at xmls/Relax.xml, and example pdbs can be found in example_pdbs. Please note that in our CADAbRe protocol, we run the initial relax 15 times and take the lowest-scoring one. The output for the example pdbs can be found in example_pdbs_relaxed. Each relax job should take about 15 minutes to run on one CPU. 
+We recommend relaxing the parental structures before design. A RosettaScripts xml for running the relax can be found at xmls/Relax.xml, and example pdbs can be found in examples/example_pdbs. Please note that in our CADAbRe protocol, we run the initial relax 15 times and take the lowest-scoring one. The output for the example pdbs can be found in examples/example_pdbs_relaxed. Each relax job should take about 15 minutes to run on one CPU. 
 
 ### Step 2: Threading combinations of human germlines on each parental structure
-An example xml for running the threading can be found at xmls/CADAbRe.xml. Examples of several germline combinations threaded on the relaxed structure of PDB ID 3NAA can be found in example_pdbs_threaded. Each threading job should take about 5 minutes to run on one CPU. 
+An example xml for running the threading can be found at xmls/CADAbRe.xml. Examples of several germline combinations threaded on the relaxed structure of PDB ID 3NAA can be found in examples/example_pdbs_threaded. Each threading job should take about 5 minutes to run on one CPU. 
 
-### Step 3: Selecting allowed CDR H3 point mutations based on each selected stucture
-Example xmls for running the alanine scan and hydrogen-bond scan can be found at xmls/alascan.xml and xmls/alascan_Hbond.xml, respectively. Files summarizing the results from the alanine and hydrogen-bond scan on PDB ID 3NAA can be found at example_scanning_summaries/3naa_alascan.log and example_scanning_summaries/3naa_Hbond.log, respectively. Each position should take about one minute to run on one CPU. 
+### Step 3: Selecting combinations of frameworks that freely combine to give diverse, low-energy structures
+A jupyter notebook for training EpiNNet can be found at https://github.com/Fleishman-Lab/htFuncLib-web-server (htFuncLib.ipynb)
 
-An example xml for modeling all allowed point CDR H3 point mutations can be found at xmls/filterscan.xml. An example file summarizing the mutations allowed at each CDR H3 position based on the per-residue frequency data for PDB ID 3NAA can be found at example_scanning_summaries/3naa_allowd_muts.resfile. A file summarizing the results for PDB ID 3NAA can be found at example_scanning_summaries/3naa_4.resfile. Each mutation modeled at each position should take about one minute to run on one CPU. 
+### Step 4: Selecting allowed CDR H3 point mutations based on each selected stucture
+Example xmls for running the alanine scan and hydrogen-bond scan can be found at xmls/alascan.xml and xmls/alascan_Hbond.xml, respectively. Files summarizing the results from the alanine and hydrogen-bond scan on PDB ID 3NAA can be found at examples/example_scanning_summaries/3naa_alascan.log and examples/example_scanning_summaries/3naa_Hbond.log, respectively. Each position should take about one minute to run on one CPU. 
 
-### Step 4: Combinatorial enumaration of allowed point mutations based on each selected structure
-An example xml for running the combinatorial enumeration can be found at xmls/H3_combinatorial_enumeration.xml. An example pdb file created for a design based on PDB ID 3NAA can be found at example_H3_design/3naa_example_H3_design.pdb.gz. Each design job should take about two minutes to run on one CPU. 
+An example xml for modeling all allowed point CDR H3 point mutations can be found at xmls/filterscan.xml. An example file summarizing the mutations allowed at each CDR H3 position based on the per-residue frequency data for PDB ID 3NAA can be found at examples/example_scanning_summaries/3naa_allowd_muts.resfile. A file summarizing the results for PDB ID 3NAA can be found at examples/example_scanning_summaries/3naa_4.resfile. Each mutation modeled at each position should take about one minute to run on one CPU. 
+
+### Step 5: Combinatorial enumaration of allowed point mutations based on each selected structure
+An example xml for running the combinatorial enumeration can be found at xmls/H3_combinatorial_enumeration.xml. An example pdb file created for a design based on PDB ID 3NAA can be found at examples/example_H3_design/3naa_example_H3_design.pdb.gz. Each design job should take about two minutes to run on one CPU. 
